@@ -2,15 +2,27 @@
   "name": "states-nepal",
   "version": "1.0.0",
   "description": "npm package to get dataset for local states in Nepal.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/adarshaacharya/states-nepal.git",
   "author": "Aadarsha <connectwithadarsha@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "devDependencies": {
     "husky": "^4.3.7",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0"
   }
 }
