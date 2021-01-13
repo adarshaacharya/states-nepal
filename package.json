@@ -1,0 +1,16 @@
+{
+  "name": "states-nepal",
+  "version": "1.0.0",
+  "description": "npm package to get dataset for local states in Nepal.",
+  "main": "index.js",
+  "repository": "https://github.com/adarshaacharya/states-nepal.git",
+  "author": "Aadarsha <connectwithadarsha@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+  },
+  "devDependencies": {
+    "husky": "^4.3.7",
+    "prettier": "^2.2.1"
+  }
+}
