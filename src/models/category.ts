@@ -16,8 +16,8 @@ export class Category {
 		try {
 			this.lang = lang
 			this.categories = fetchCategories(this.lang)
-		} catch (e) {
-			throw new Error(e)
+		} catch (err) {
+			throw new Error(`Categories of given language doesn't exists. ${err}`)
 		}
 	}
 
