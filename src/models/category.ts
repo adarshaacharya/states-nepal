@@ -1,4 +1,4 @@
-import fetchCategory from '../fetchers/categories-fetcher'
+import fetchCategories from '../fetchers/categories-fetcher'
 type Language = 'en' | 'np'
 type Key = 'id' | 'shortCode' | 'name'
 
@@ -8,14 +8,14 @@ interface ICategories {
 	shortCode: string
 }
 
-class Category {
+export class Category {
 	private categories: ICategories[]
 	private lang
 
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
-			this.categories = fetchCategory(this.lang)
+			this.categories = fetchCategories(this.lang)
 		} catch (e) {
 			throw new Error(e)
 		}
