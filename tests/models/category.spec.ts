@@ -1,4 +1,4 @@
-import { Category } from '../../src/models/category'
+import { Category, ICategories, Key } from '../../src/models/category'
 
 const range = (lb: number, ub: number) =>
 	Array.from(new Array(ub), (x, i) => i + lb)
@@ -24,7 +24,35 @@ describe('Test Category entities', () => {
 			const item = npCategories.find(id)
 			expect(item).toBeNull()
 		})
-    })
-    
-    
+	})
+
+	it('should show category by shortId', () => {
+		const correctCodes = ['MC', 'SMC', 'M', 'RM']
+		const incorrectCodes = ['AA', 'BB', 'CC', 'DD']
+
+		correctCodes.forEach(code => {
+			const item = npCategories.findByShortCode(code)
+			expect(item).not.toBeNull()
+		})
+
+		incorrectCodes.forEach(code => {
+			const item = npCategories.findByShortCode(code)
+			expect(item).toBeNull()
+		})
+	})
+
+	it('should search categories that match with given key', () => {
+		const keywords = ['id', 'name', 'short_code']
+		const categories = npCategories.allCategories()
+
+		for (const key of keywords) {
+			for (const value of categories) {
+				const items = npCategories.search(
+					key as Key,
+					value[key as keyof ICategories]
+                )
+				expect(items.length).toBeGreaterThanOrEqual(1)
+			}
+		}
+	})
 })

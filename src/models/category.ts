@@ -1,11 +1,11 @@
 import fetchCategories from '../fetchers/categories-fetcher'
 type Language = 'en' | 'np'
-type Key = 'id' | 'shortCode' | 'name'
+export type Key = 'id' | 'short_code' | 'name'
 
-interface ICategories {
+export interface ICategories {
 	id: number
 	name: string
-	shortCode: string
+	short_code: string
 }
 
 export class Category {
@@ -33,6 +33,7 @@ export class Category {
 	/**
 	 * Find category deatils by unique id
 	 *
+	 * @param id
 	 * @returns category | null
 	 */
 	public find(id: number) {
@@ -43,11 +44,11 @@ export class Category {
 	/**
 	 * Find category details by short code
 	 *
-	 * @param shortCode
-	 * @return category|null
+	 * @param short_code
+	 * @return category | null
 	 */
-	public findByShortCode(shortCode: string) {
-		const category = this.categories.find(el => el.shortCode === shortCode)
+	public findByShortCode(short_code: string) {
+		const category = this.categories.find(el => el.short_code === short_code)
 		return category ? category : null
 	}
 
@@ -55,10 +56,10 @@ export class Category {
 	 * Search Categories
 	 *
 	 * @param key
-	 * @param value
+	 * @param value 
 	 * @return array of categories that match with given key
 	 */
-	public search(key: Key, value: string) {
-		return this.categories.filter(el => el[key] === value)
+	public search(key: Key, value: string | number) {
+		return this.categories.filter(el => (el[key] ? el[key] === value : null))
 	}
 }
