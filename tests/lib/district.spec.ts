@@ -1,4 +1,4 @@
-import { District, IDistricts, Key } from '../../src/lib/district'
+import { District, IDistrict  } from '../../src/lib/district'
 import { range } from '../../src/utils'
 
 const npDistricts = new District('np')
@@ -48,8 +48,8 @@ describe('Test District entities', () => {
 		for (const key of keywords) {
 			for (const value of districts) {
 				const items = npDistricts.search(
-					key as Key,
-					value[key as keyof IDistricts]
+					key as keyof IDistrict,
+					value[key as keyof IDistrict]
 				)
 				expect(items.length).toBeGreaterThanOrEqual(1)
 			}

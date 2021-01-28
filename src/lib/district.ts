@@ -2,15 +2,9 @@ import fetchDistricts from '../fetchers/districts-fetcher'
 import { numericEnglish } from '../utils'
 
 type Language = 'en' | 'np'
-export type Key =
-	| 'id'
-	| 'province_id'
-	| 'name'
-	| 'area_sq_km'
-	| 'website'
-	| 'headquarter'
 
-export interface IDistricts {
+
+export interface IDistrict {
 	id: number
 	province_id: number
 	name: string
@@ -23,7 +17,7 @@ export interface IDistricts {
  * Class District
  */
 export class District {
-	private districts: IDistricts[]
+	private districts: IDistrict[]
 	private lang
 
 	/**
@@ -116,7 +110,7 @@ export class District {
 	 * @param value
 	 * @return array of districts that match with given key
 	 */
-	public search(key: Key, value: string | number) {
+	public search(key: keyof IDistrict, value: string | number) {
 		return this.districts.filter(el => (el[key] ? el[key] === value : null))
 	}
 }
