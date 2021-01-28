@@ -8,10 +8,18 @@ export interface ICategories {
 	short_code: string
 }
 
+/**
+ * Class Category
+ */
 export class Category {
 	private categories: ICategories[]
 	private lang
 
+	/**
+	 * Category constructor.
+	 * @param string lang
+	 * @throws exception
+	 */
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
@@ -56,7 +64,7 @@ export class Category {
 	 * Search Categories
 	 *
 	 * @param key
-	 * @param value 
+	 * @param value
 	 * @return array of categories that match with given key
 	 */
 	public search(key: Key, value: string | number) {

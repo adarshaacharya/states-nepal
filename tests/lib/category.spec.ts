@@ -1,4 +1,4 @@
-import { Category, ICategories, Key } from '../../src/models/category'
+import { Category, ICategories, Key } from '../../src/lib/category'
 
 const range = (lb: number, ub: number) =>
 	Array.from(new Array(ub), (x, i) => i + lb)
