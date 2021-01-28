@@ -1,4 +1,5 @@
 import fetchDistricts from '../fetchers/districts-fetcher'
+import { numericEnglish } from '../utils'
 
 type Language = 'en' | 'np'
 export type Key =
@@ -63,7 +64,6 @@ export class District {
 	 * Get districts with municipalities
 	 *
 	 * @return array
-	 * @throws LoadingException
 	 */
 	public getDistrictsWithMunicipalities() {
 		// const municipality = new M
@@ -85,12 +85,28 @@ export class District {
 	 * @return district
 	 */
 	public largest() {
-		// let areas = this.districts.map(el => el.area_sq_km)
-		// if (this.lang === 'np') {
-		// 	areas.map(el => parseInt(numericEnglish(el)))
-		// }
+		const areas = this.districts.map(el => el.area_sq_km)
+		let numericArea: number[] = []
+		if (this.lang === 'np') {
+			numericArea = areas.map(el => numericEnglish(el)).map(i => Number(i))
+		}
 
-		// console.log(areas)
+		return this.districts[numericArea.indexOf(Math.max(...numericArea))]
+	}
+
+	/**
+	 * Get district with smallest area
+	 *
+	 * @return district
+	 */
+	public smallest() {
+		const areas = this.districts.map(el => el.area_sq_km)
+		let numericArea: number[] = []
+		if (this.lang === 'np') {
+			numericArea = areas.map(el => numericEnglish(el)).map(i => Number(i))
+		}
+
+		return this.districts[numericArea.indexOf(Math.min(...numericArea))]
 	}
 
 	/**

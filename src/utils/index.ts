@@ -9,6 +9,7 @@ const nepaliToEnglish: { [key: string]: string } = {
 	'७': '7',
 	'८': '8',
 	'९': '9',
+	'.': '.',
 }
 
 const englishToNepali: { [key: string]: string } = {
@@ -22,6 +23,7 @@ const englishToNepali: { [key: string]: string } = {
 	'7': '७',
 	'8': '८',
 	'9': '९',
+	'.': '.',
 }
 /**
  * @description : Convert english numeric value to nepali numeric value
