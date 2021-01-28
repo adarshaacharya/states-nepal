@@ -29,7 +29,7 @@ const englishToNepali: { [key: string]: string } = {
  * @param value
  * @returns mixed
  */
-function numericNepali(value: string) {
+export function numericNepali(value: string) {
 	return value
 		.split('')
 		.map(v => englishToNepali[v])
@@ -42,9 +42,19 @@ function numericNepali(value: string) {
  * @param value
  * @returns mixed
  */
-function numericEnglish(value: string) {
+export function numericEnglish(value: string) {
 	return value
 		.split('')
 		.map(v => nepaliToEnglish[v])
 		.join('')
 }
+
+/**
+ * @description : Make range of numbers between lower bound and upper bound
+ *
+ * @param lb - lower bound
+ * @param ub - upper bound
+ * @returns array of given range
+ */
+export const range = (lb: number, ub: number) =>
+	Array.from(new Array(ub), (x, i) => i + lb)

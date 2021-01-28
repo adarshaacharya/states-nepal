@@ -85,12 +85,12 @@ export class District {
 	 * @return district
 	 */
 	public largest() {
-		let areas = this.districts.map(el => el.area_sq_km)
-		if (this.lang === 'np') {
-			areas = areas.map(area => numericEnglish(area))
-		}
+		// let areas = this.districts.map(el => el.area_sq_km)
+		// if (this.lang === 'np') {
+		// 	areas.map(el => parseInt(numericEnglish(el)))
+		// }
 
-		return Math.max(null, areas)
+		// console.log(areas)
 	}
 
 	/**

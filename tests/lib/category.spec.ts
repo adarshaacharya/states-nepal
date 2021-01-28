@@ -1,7 +1,6 @@
 import { Category, ICategories, Key } from '../../src/lib/category'
+import { range} from '../../src/utils'
 
-const range = (lb: number, ub: number) =>
-	Array.from(new Array(ub), (x, i) => i + lb)
 
 const npCategories = new Category('np')
 const enCategories = new Category('en')
