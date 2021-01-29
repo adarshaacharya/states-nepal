@@ -1,5 +1,5 @@
 <p align="center">
-<img src="assets/logo.svg" alt="Logo" height="100px"/>
+<img src="assets/logo.svg" alt="Logo" height="130px"/>
 </p>
 
 <h3 align="center">states-nepal</h3>
