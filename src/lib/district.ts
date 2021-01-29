@@ -3,7 +3,6 @@ import { numericEnglish } from '../utils'
 
 type Language = 'en' | 'np'
 
-
 export interface IDistrict {
 	id: number
 	province_id: number
@@ -52,15 +51,6 @@ export class District {
 	public find(id: number) {
 		const district = this.districts.find(el => el.id === id)
 		return district ? district : null
-	}
-
-	/**
-	 * Get districts with municipalities
-	 *
-	 * @return array
-	 */
-	public getDistrictsWithMunicipalities() {
-		// const municipality = new M
 	}
 
 	/**

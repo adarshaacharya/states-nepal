@@ -2,34 +2,34 @@ import { Municipality, IMunicipality } from '../../src/lib/municipality'
 import { numericNepali, range } from '../../src/utils'
 
 const APP_LANG = 'np'
-const _municipalities = new Municipality(APP_LANG)
+const _municipality = new Municipality(APP_LANG)
 
 describe('Test Municipality entities', () => {
 	it('should test number of municipalities in Nepal', () => {
-		expect(_municipalities.allMunicipalities().length).toBe(753)
+		expect(_municipality.allMunicipalities().length).toBe(753)
 	})
 
 	it('should test find municipality by Id', () => {
 		const correctRange = range(1, 753)
 		correctRange.forEach(id => {
-			const item = _municipalities.find(id)
+			const item = _municipality.find(id)
 			expect(item).not.toBeNull()
 		})
 
 		const incorrectRange = range(754, 1000)
 		incorrectRange.forEach(id => {
-			const item = _municipalities.find(id)
+			const item = _municipality.find(id)
 			expect(item).toBeNull()
 		})
 	})
 
 	it('should return the largest municipality by area', () => {
-		const largest = _municipalities.largest()
+		const largest = _municipality.largest()
 		expect(largest).toMatchObject({ id: 617, district_id: 62, category_id: 4 })
 	})
 
 	it('should return the smallest municipality by area', () => {
-		const smallest = _municipalities.smallest()
+		const smallest = _municipality.smallest()
 		expect(smallest).toMatchObject({ id: 274, district_id: 23, category_id: 3 })
 	})
 
@@ -37,7 +37,6 @@ describe('Test Municipality entities', () => {
 		let wards: any = []
 		if (APP_LANG === 'np') {
 			const wardsRange = range(1, 33)
-
 			wards = wardsRange.map(i => String(i)).map(el => numericNepali(el))
 		} else {
 			wards = range(1, 33)
@@ -45,15 +44,16 @@ describe('Test Municipality entities', () => {
 
 		const set = range(1, 753)
 		set.forEach(id => {
-			const result = _municipalities.wards(id)!.filter(x => !wards.includes(x))
-			expect(result.length).toBe(0)
+            const muniWards = _municipality.wards(id)
+			const result = muniWards?.filter(x => !wards.includes(x))
+			expect(result?.length).toBe(0)
 		})
 	})
 
 	it('should test municipalities categories', () => {
 		const set = range(1, 753)
 		set.forEach(id => {
-			const municipality = _municipalities.find(id)
+			const municipality = _municipality.find(id)
 			const result =
 				municipality && range(1, 4).includes(municipality.category_id)
 			expect(result).toBeTruthy()
@@ -63,7 +63,7 @@ describe('Test Municipality entities', () => {
 	it('should test municipalities districts', () => {
 		const set = range(1, 753)
 		set.forEach(id => {
-			const municipality = _municipalities.find(id)
+			const municipality = _municipality.find(id)
 			const result =
 				municipality && range(1, 77).includes(municipality.district_id)
 			expect(result).toBeTruthy()
@@ -80,11 +80,11 @@ describe('Test Municipality entities', () => {
 			'website',
 			'wards',
 		]
-		const allMunicipalities = _municipalities.allMunicipalities()
+		const allMunicipalities = _municipality.allMunicipalities()
 
 		for (const key of keywords) {
 			for (const value of allMunicipalities) {
-				const items = _municipalities.search(
+				const items = _municipality.search(
 					key as keyof IMunicipality,
 					value[key as keyof IMunicipality]
 				)

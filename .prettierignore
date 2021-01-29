@@ -2,3 +2,4 @@ node_modules
 prod
 build
 dist
+coverage

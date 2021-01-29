@@ -1,8 +1,7 @@
 import fetchCategories from '../fetchers/categories-fetcher'
 type Language = 'en' | 'np'
-export type Key = 'id' | 'short_code' | 'name'
 
-export interface ICategories {
+export interface ICategory {
 	id: number
 	name: string
 	short_code: string
@@ -12,7 +11,7 @@ export interface ICategories {
  * Class Category
  */
 export class Category {
-	private categories: ICategories[]
+	private categories: ICategory[]
 	private lang
 
 	/**
@@ -67,7 +66,7 @@ export class Category {
 	 * @param value
 	 * @return array of categories that match with given key
 	 */
-	public search(key: Key, value: string | number) {
+	public search(key: keyof ICategory, value: string | number) {
 		return this.categories.filter(el => (el[key] ? el[key] === value : null))
 	}
 }
