@@ -12,7 +12,7 @@ export interface IProvince {
 	website: string
 	headquarter: string
 	districts?: IDistrict[]
-}
+} 
 
 /**
  * Class Province
@@ -89,7 +89,6 @@ export class Province {
 	 * Get provinces with districts
 	 *
 	 * @return array of provinces with districts
-	 * @throws
 	 */
 
 	public getProvincesWithDistricts() {

@@ -19,8 +19,6 @@ import { Category } from 'states-nepal'
 const category = new Category('np')
 ```
 
-
-
 ### Retrieving Categories
 
 Once create instance of Category, you can retrieve variety of data.
@@ -74,4 +72,3 @@ List of options for parameter key:
 ```js
 'id' 'name' 'short_code'
 ```
-
