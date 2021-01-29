@@ -19,17 +19,11 @@ import { Category } from 'states-nepal'
 const category = new Category('np')
 ```
 
-**You can use Common JS syntax:**
 
-```js
-const StatesNepal = require('states-nepal)
-
-const category = new StatesNepal.Category('np');
-```
 
 ### Retrieving Categories
 
-Once you initiate category entity, you can retrieve variety of data.
+Once create instance of Category, you can retrieve variety of data.
 
 **1. Get list of all categories**
 
@@ -69,7 +63,10 @@ import { Category } from 'states-nepal'
 
 const category = new Category()
 
-category.search('name', 'Municipality')
+// examples
+category.search('name', 'Municipality') // (key, value)
+category.search('id', 1)
+category.search('short_code', 'M')
 ```
 
 List of options for parameter key:
@@ -77,3 +74,4 @@ List of options for parameter key:
 ```js
 'id' 'name' 'short_code'
 ```
+
