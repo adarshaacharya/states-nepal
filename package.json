@@ -1,7 +1,7 @@
 {
 	"name": "states-nepal",
 	"version": "1.0.0",
-	"description": "npm package to get dataset for local states in Nepal.",
+	"description": "npm package to get structured dataset for local states in Nepal.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"repository": "https://github.com/adarshaacharya/states-nepal.git",
