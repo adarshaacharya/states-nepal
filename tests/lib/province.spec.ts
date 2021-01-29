@@ -32,20 +32,23 @@ describe('Test province entities', () => {
 		const smallest = _province.smallest()
 		expect(smallest).toMatchObject({ id: 2 })
 	})
- 
 
 	it('should test if districts are correctly loaded with provinces', () => {
+		const provincesWithDistricts = _province.getProvincesWithDistricts()
 
+		// console.log(provincesWithDistricts.length)
+		provincesWithDistricts.map(item => {
+			expect(item.districts.length).toBeGreaterThanOrEqual(1)
+		})
 	})
 
-	
 	it('should search provinces that match with given key', () => {
 		const keywords = ['id', 'name', 'area_sq_km', 'website', 'headquarter']
 		const allProvinces = _province.allProvinces()
 
 		for (const key of keywords) {
 			for (const value of allProvinces) {
-                const items = _province.search(key as Key, value[key as Key])
+				const items = _province.search(key as Key, value[key as Key])
 				expect(items.length).toBeGreaterThanOrEqual(1)
 			}
 		}

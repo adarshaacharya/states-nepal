@@ -29,7 +29,7 @@ export class Province {
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
-			this.provinces = fetcher('provinces',this.lang)
+			this.provinces = fetcher('provinces', this.lang)
 		} catch (err) {
 			throw new Error(`Province of given language doesn't exists. ${err}`)
 		}
@@ -96,9 +96,10 @@ export class Province {
 		const district = new District(APP_LANG)
 		const provinces = this.provinces
 
-		const result = provinces.map(
-			item => (item['districts'] = district.getDistrictsByProvince(item.id))
-		)
+		const result = provinces.map(item => ({
+			...item,
+			districts: district.getDistrictsByProvince(item.id),
+		}))
 		return result
 	}
 
