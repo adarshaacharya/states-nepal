@@ -126,7 +126,7 @@ export class Municipality {
 			return wards.map(i => String(i)).map(el => numericNepali(el))
 		}
 
-		return municipality && range(1, parseInt(municipality.wards))
+		return municipality && (range(1, parseInt(municipality.wards))).map(i => String(i))
 	}
 
 	/**
