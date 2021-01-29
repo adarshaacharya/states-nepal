@@ -1,4 +1,4 @@
-import fetchMunicipalities from '../fetchers/municipalities-fetcher'
+import { fetcher } from '../fetchers'
 import { numericEnglish, numericNepali, range } from '../utils'
 type Language = 'en' | 'np'
 
@@ -27,7 +27,7 @@ export class Municipality {
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
-			this.municipalities = fetchMunicipalities(this.lang)
+			this.municipalities = fetcher('municipalities',this.lang)
 		} catch (err) {
 			throw new Error(`Municipalities of given language doesn't exists. ${err}`)
 		}

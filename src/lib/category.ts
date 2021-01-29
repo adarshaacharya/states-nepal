@@ -1,4 +1,4 @@
-import fetchCategories from '../fetchers/categories-fetcher'
+import { fetcher } from '../fetchers'
 type Language = 'en' | 'np'
 
 export interface ICategory {
@@ -22,7 +22,7 @@ export class Category {
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
-			this.categories = fetchCategories(this.lang)
+			this.categories = fetcher('categories', this.lang)
 		} catch (err) {
 			throw new Error(`Categories of given language doesn't exists. ${err}`)
 		}

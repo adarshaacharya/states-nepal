@@ -1,4 +1,4 @@
-import fetchDistricts from '../fetchers/districts-fetcher'
+import { fetcher } from '../fetchers'
 import { numericEnglish } from '../utils'
 
 type Language = 'en' | 'np'
@@ -27,7 +27,7 @@ export class District {
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
-			this.districts = fetchDistricts(this.lang)
+			this.districts = fetcher('districts',this.lang)
 		} catch (err) {
 			throw new Error(`Districts of given language doesn't exists. ${err}`)
 		}
