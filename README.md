@@ -6,17 +6,33 @@
 
 <p align="center">
 <b>
-Get structured data about administrative division in Nepal.
+🇳🇵 Get structured data about administrative division in Nepal.
 
 </b>
+</p>
+
+<p align="center">
+ <a href="https://github.com/adarshaacharya/states-nepal/actions">
+      <img alt="Tests Passing" src="https://github.com/adarshaacharya/states-nepal/workflows/Test/badge.svg" />
+    </a>
+<a href="https://github.com/adarshaacharya/states-nepal/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/adarshaacharya/states-nepal?color=0088ff" />
+    </a>
+    <a href="https://github.com/adarshaacharya/states-nepal/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/adarshaacharya/states-nepal?color=0088ff" />
+    </a>
+
 </p>
 
 <p align="center">
     <a href="https://github.com/adarshaacharya/states-nepal/issues">Report Bug</a>
     ·
     <a href="https://github.com/adarshaacharya/states-nepal/issues">Request Feature</a>
+    .
+    <a href="https://github.com/adarshaacharya/states-nepal/issues">Ask Question</a>
+
   </p>
-  <p align="center">states-nepal is a Javascript/Typescript based npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc. Install and use the package on any Javascript based applications in one go! </p>
+  <p align="center">states-nepal is a npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc. Install and use the package on any Javascript/Typescript based based applications in one go! </p>
 
 ## Installation
 
