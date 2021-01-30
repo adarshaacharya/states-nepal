@@ -32,7 +32,7 @@
     <a href="https://github.com/adarshaacharya/states-nepal/issues">Ask Question</a>
 
   </p>
-  <p align="center">states-nepal is a npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc. Install and use the package on any Javascript/Typescript based based applications in one go! </p>
+  <p align="center">states-nepal is a npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc. Install and use the package on any Javascript/Typescript based  applications in one go! </p>
 
 ## Installation
 
