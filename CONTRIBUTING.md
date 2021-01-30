@@ -22,7 +22,7 @@ Pull requests are the best way to propose changes. We actively welcome your pull
 Before running the app locally make sure you have installed following things :
 
 - Node >= 14.15.4
-- Yarn >= 1.22.5 _(we recommend you to use yarn instead of npm)_
+- npm >= 6.14.10
 
 For contributing the project:
 
