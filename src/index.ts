@@ -3,4 +3,4 @@
  * Copyright(c) 2021 Aadarsha Acharya
  * MIT Licensed
  */
-export { Category, District, Municipality, Province } from './src/entities'
+export { Category, District, Municipality, Province } from './entities'

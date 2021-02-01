@@ -1,6 +1,6 @@
 {
 	"name": "states-nepal",
-	"version": "1.0.0",
+	"version": "0.0.2",
 	"description": "Get structured dataset for administrative division in Nepal.",
 	"keywords": [
 		"states-nepal",
@@ -8,16 +8,24 @@
 		"nodejs",
 		"typesecript"
 	],
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./lib/cjs/src/index.js",
+	"module": "./lib/esm/src/index.js",
+	"types": "./lib/esm/src/index.d.ts",
+	"files": [
+		"lib/"
+	],
 	"repository": "https://github.com/adarshaacharya/states-nepal.git",
 	"author": "Aadarsha <connectwithadarsha@gmail.com>",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
 	"license": "MIT",
 	"scripts": {
 		"test": "jest",
-		"build": "tsc -p tsconfig.json",
+		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+		"build:watch": "tsc -w",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-		"prepublish": "npm run build"
+		"prepublishOnly": "npm run build"
 	},
 	"husky": {
 		"hooks": {
