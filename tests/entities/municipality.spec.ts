@@ -1,4 +1,4 @@
-import { Municipality, IMunicipality } from '../../src/lib/municipality'
+import { Municipality, IMunicipality } from '../../src/entities/municipality'
 import { numericNepali, range } from '../../src/utils'
 
 const APP_LANG = 'np'

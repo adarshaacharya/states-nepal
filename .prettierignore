@@ -3,3 +3,4 @@ prod
 build
 dist
 coverage
+lib

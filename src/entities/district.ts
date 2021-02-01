@@ -29,7 +29,7 @@ export class District {
 			this.lang = lang
 			this.districts = fetcher('districts',this.lang)
 		} catch (err) {
-			throw new Error(`Districts of given language doesn't exists. ${err}`)
+			throw new Error(`Districts of given language doesn't exists. `)
 		}
 	}
 

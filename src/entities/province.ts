@@ -12,7 +12,7 @@ export interface IProvince {
 	website: string
 	headquarter: string
 	districts?: IDistrict[]
-} 
+}
 
 /**
  * Class Province
@@ -31,7 +31,7 @@ export class Province {
 			this.lang = lang
 			this.provinces = fetcher('provinces', this.lang)
 		} catch (err) {
-			throw new Error(`Province of given language doesn't exists. ${err}`)
+			throw new Error(`Province of given language doesn't exists.`)
 		}
 	}
 

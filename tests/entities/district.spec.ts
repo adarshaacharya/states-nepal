@@ -1,4 +1,4 @@
-import { District, IDistrict  } from '../../src/lib/district'
+import { District, IDistrict  } from '../../src/entities/district'
 import { range } from '../../src/utils'
 const APP_LANG = 'np'
 

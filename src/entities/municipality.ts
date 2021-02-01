@@ -29,7 +29,7 @@ export class Municipality {
 			this.lang = lang
 			this.municipalities = fetcher('municipalities',this.lang)
 		} catch (err) {
-			throw new Error(`Municipalities of given language doesn't exists. ${err}`)
+			throw new Error(`Municipalities of given language doesn't exists.`)
 		}
 	}
 
