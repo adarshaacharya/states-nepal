@@ -1,4 +1,4 @@
-import { Category, ICategory } from '../../src/lib/category'
+import { Category, ICategory } from '../../src/entities/category'
 import { range} from '../../src/utils'
 
 const APP_LANG = 'np'

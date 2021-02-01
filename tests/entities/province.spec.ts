@@ -1,4 +1,4 @@
-import { Key, Province } from '../../src/lib/province'
+import { Key, Province } from '../../src/entities/province'
 import { range } from '../../src/utils'
 
 const APP_LANG = 'np'

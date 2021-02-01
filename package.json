@@ -1,7 +1,13 @@
 {
 	"name": "states-nepal",
 	"version": "1.0.0",
-	"description": "npm package to get structured dataset for local states in Nepal.",
+	"description": "Get structured dataset for administrative division in Nepal.",
+	"keywords": [
+		"states-nepal",
+		"nepal",
+		"nodejs",
+		"typesecript"
+	],
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"repository": "https://github.com/adarshaacharya/states-nepal.git",
@@ -10,7 +16,8 @@
 	"scripts": {
 		"test": "jest",
 		"build": "tsc -p tsconfig.json",
-		"format": "prettier --write \"**/*.{js,jsx,json,md}\""
+		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+		"prepublish": "npm run build"
 	},
 	"husky": {
 		"hooks": {
