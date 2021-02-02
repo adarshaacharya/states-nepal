@@ -12,8 +12,15 @@
 </p>
 
 <p align="center">
+ <a href="https://www.npmjs.com/package/states-nepal">
+    <img src="https://img.shields.io/npm/v/states-nepal" alt="npm version"/>
+ </a>
+  <a href="https://npmcharts.com/compare/states-nepal?minimal=true">
+    <img src="https://img.shields.io/npm/dt/states-nepal" alt="npm downloads"/>
+ </a>
+ 
  <a href="https://github.com/adarshaacharya/states-nepal/actions">
-      <img alt="Tests Passing" src="https://github.com/adarshaacharya/states-nepal/workflows/Test/badge.svg" />
+      <img alt="tests passing" src="https://github.com/adarshaacharya/states-nepal/workflows/tests/badge.svg" />
     </a>
 <a href="https://github.com/adarshaacharya/states-nepal/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/adarshaacharya/states-nepal?color=0088ff" />

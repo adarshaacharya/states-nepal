@@ -2,7 +2,7 @@
 
 ### Introduction
 
-You can use CommonJS modules or ES modules syntax for importing the Category entity. 
+You can use CommonJS modules or ES modules syntax for importing the Category entity.
 
 ```js
 import { Category } from 'states-nepal' // ES6
