@@ -2,6 +2,18 @@
 
 ### Introduction
 
+You can use CommonJS modules or ES modules syntax for importing the Province entity.
+
+```js
+import { Province } from 'states-nepal' // ES6
+```
+
+or
+
+```js
+const { Province } = require('states-nepal') // CommonJS
+```
+
 By default, english language will be used. In order to use Nepali language, you have to specify while initiating the province object.
 
 ```js

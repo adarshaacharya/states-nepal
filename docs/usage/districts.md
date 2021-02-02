@@ -2,6 +2,18 @@
 
 ### Introduction
 
+You can use CommonJS modules or ES modules syntax for importing the District entity.
+
+```js
+import { District } from 'states-nepal' // ES6
+```
+
+or
+
+```js
+const { District } = require('states-nepal') // CommonJS
+```
+
 By default, english language will be used. In order to use Nepali language, you have to specify while initiating the district object.
 
 ```js

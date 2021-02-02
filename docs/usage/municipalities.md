@@ -2,6 +2,18 @@
 
 ### Introduction
 
+You can use CommonJS modules or ES modules syntax for importing the Municipality entity.
+
+```js
+import { Municipality } from 'states-nepal' // ES6
+```
+
+or
+
+```js
+const { Municipality } = require('states-nepal') // CommonJS
+```
+
 By default, english language will be used. In order to use Nepali language, you have to specify while initiating the municipality object.
 
 ```js

@@ -2,6 +2,18 @@
 
 ### Introduction
 
+You can use CommonJS modules or ES modules syntax for importing the Category entity.
+
+```js
+import { Category } from 'states-nepal' // ES6
+```
+
+or
+
+```js
+const { Category } = require('states-nepal') // CommonJS
+```
+
 By default, english language will be used. In order to use Nepali language, you have to specify while initiating the category object.
 
 ```js
