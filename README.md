@@ -95,7 +95,7 @@ Give a ⭐️ if you like the project! :tada:
 ## 👤 Author
 
 - Website: <https://adarshaacharya.com.np/>
-- Twitter: [@adarshatweets](https://twitter.com/adarshatweets)
+- Twitter: [@adarshatweets](https://twitter.com/aadarshatweets)
 - Github: [@adarshaacharya](https://github.com/adarshaacharya)
 - LinkedIn: [@adarshaacharya](https://linkedin.com/in/adarshaacharya)
 
