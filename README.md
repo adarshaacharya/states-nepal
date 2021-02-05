@@ -49,7 +49,17 @@ $ npm install states-nepal
 
 ## Support
 
-Currently, this library supports following two languages.
+**Applications :**
+
+- Typescript
+- Javascript
+
+**Import :**
+
+- CommonJS Module
+- ES Module
+
+**Languages :**
 
 - English
 - नेपाली
@@ -69,7 +79,7 @@ All data are collected from wikipedia and various Nepal government sites. We hav
 
 #### Usage Docs
 
-See the implementation of each entity from following docs.
+See the how to implement the package on your Javascript applications on following docs:
 
 - [Provinces](./docs/usage/provinces.md)
 - [Districts](./docs/usage/districts.md)
@@ -95,7 +105,7 @@ Give a ⭐️ if you like the project! :tada:
 ## 👤 Author
 
 - Website: <https://adarshaacharya.com.np/>
-- Twitter: [@adarshatweets](https://twitter.com/adarshatweets)
+- Twitter: [@adarshatweets](https://twitter.com/aadarshatweets)
 - Github: [@adarshaacharya](https://github.com/adarshaacharya)
 - LinkedIn: [@adarshaacharya](https://linkedin.com/in/adarshaacharya)
 

@@ -77,7 +77,7 @@ If the project maintainer has any additional requirements, you will find them li
 
 ## Contact
 
-If you need any help, you can always drop me a message on my [Twitter @adarshatweets](https://twitter.com/adarshatweets) or drop me an email at [connectwithadarsha@gmail.com](connectwithadarsha@gmail.com).
+If you need any help, you can always drop me a message on my [Twitter @adarshatweets](https://twitter.com/aadarshatweets) or drop me an email at [connectwithadarsha@gmail.com](connectwithadarsha@gmail.com).
 
 ## License
 
