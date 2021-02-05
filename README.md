@@ -79,7 +79,7 @@ All data are collected from wikipedia and various Nepal government sites. We hav
 
 #### Usage Docs
 
-See the implementation of each entity from following docs.
+See the how to implement the package on your Javascript applications on following docs:
 
 - [Provinces](./docs/usage/provinces.md)
 - [Districts](./docs/usage/districts.md)
