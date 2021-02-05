@@ -49,7 +49,17 @@ $ npm install states-nepal
 
 ## Support
 
-Currently, this library supports following two languages.
+**Applications :**
+
+- Typescript
+- Javascript
+
+**Import :**
+
+- CommonJS Module
+- ES Module
+
+**Languages :**
 
 - English
 - नेपाली
