@@ -1,5 +1,6 @@
 import { fetcher } from '../fetchers'
 import { numericEnglish } from '../utils'
+import { IMunicipality, Municipality } from './municipality'
 
 type Language = 'en' | 'np'
 
@@ -10,7 +11,16 @@ export interface IDistrict {
 	area_sq_km: string
 	website: string
 	headquarter: string
+	municipalities?: IMunicipality[]
 }
+
+export type Key =
+	| 'id'
+	| 'province_id'
+	| 'name'
+	| 'area_sq_km'
+	| 'website'
+	| 'headquarter'
 
 /**
  * Class District
@@ -20,14 +30,14 @@ export class District {
 	private lang
 
 	/**
-	 * Category constructor.
+	 * District constructor.
 	 * @param string lang
 	 * @throws exception
 	 */
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
-			this.districts = fetcher('districts',this.lang)
+			this.districts = fetcher('districts', this.lang)
 		} catch (err) {
 			throw new Error(`Districts of given language doesn't exists. `)
 		}
@@ -94,13 +104,35 @@ export class District {
 	}
 
 	/**
+	 * Get district with municipalities
+	 *
+	 * @return array of districts with municipalities
+	 */
+	public getDistrictsWithMunicipalities() {
+		const municipality = new Municipality(this.lang)
+		const districts = this.allDistricts()
+
+		const districtsWithMunicipalities = districts.map(districtItem => ({
+			...districtItem,
+			municipalities: municipality
+				.getMunicipalitiesByDistrict(districtItem.id)
+				?.map(municipalityItem => ({
+					...municipalityItem,
+					wards: municipality.wards(municipalityItem.id),
+				})),
+		}))
+
+		return districtsWithMunicipalities
+	}
+
+	/**
 	 * Search Districts
 	 *
 	 * @param key
 	 * @param value
 	 * @return array of districts that match with given key
 	 */
-	public search(key: keyof IDistrict, value: string | number) {
+	public search(key: Key, value: string | number) {
 		return this.districts.filter(el => (el[key] ? el[key] === value : null))
 	}
 }

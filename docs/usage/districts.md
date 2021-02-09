@@ -85,7 +85,17 @@ const district = new District()
 district.smallest()
 ```
 
-**6. Search districts by key and value with exact match option**
+**6. Get array of districts with municipalities (having wards no.)**
+
+```js
+import { District } from 'states-nepal'
+
+const district = new District()
+
+district.getDistrictsWithMunicipalities()
+```
+
+**7. Search districts by key and value with exact match option**
 
 ```js
 import { District } from 'states-nepal'

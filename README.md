@@ -86,30 +86,30 @@ See the how to implement the package on your Javascript applications on followin
 - [Municipalities](./docs/usage/municipalities.md)
 - [Categories](./docs/usage/categories.md)
 
-## 🕐 Release Notes
+## Release Notes
 
 Read [Change Log](CHANGELOG.md) for complete logs.
 
-## 🤝 Contributing
+## Contributing
 
 I would love to have some of your contributions to this project. You can checkout [Contributing Guide](CONTRIBUTING.md) for Contribution guidelines.
 
-## 💙 Contributors
+## Contributors
 
 This package is inspired from the Php composer package [local-states-nepal](https://github.com/sagautam5/local-states-nepal). Massive thanks to [Sagar Gautam](https://github.com/sagautam5) for providing the dataset.
 
-## 👏🏻 Show your support
+## Show your support
 
 Give a ⭐️ if you like the project! :tada:
 
-## 👤 Author
+## Author
 
 - Website: <https://adarshaacharya.com.np/>
-- Twitter: [@adarshatweets](https://twitter.com/aadarshatweets)
+- Twitter: [@aadarshatweets](https://twitter.com/aadarshatweets)
 - Github: [@adarshaacharya](https://github.com/adarshaacharya)
 - LinkedIn: [@adarshaacharya](https://linkedin.com/in/adarshaacharya)
 
-## 📝 License
+## License
 
 Copyright © 2020 [Aadarsha Acharya](http://adarshaacharya.com.np/).<br />
 This project is [MIT](https://github.com/adarshaacharya/states-nepal/blob/master/LICENSE) licensed.
