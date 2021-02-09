@@ -85,7 +85,18 @@ const province = new Province()
 province.getProvincesWithDistricts()
 ```
 
-**6. Search provinces by key and value with exact match option**
+**6. Get all provinces with its districts with municipalities(having wards no.)**
+
+```js
+import { Province } from 'states-nepal'
+
+const province = new Province()
+
+province.getProvincesWithDistrictsWithMunicipalities()
+```
+
+
+**7. Search provinces by key and value with exact match option**
 
 ```js
 import { Province } from 'states-nepal'
