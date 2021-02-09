@@ -101,6 +101,11 @@ export class Province {
 		}))
 	}
 
+	/**
+	 * Get provinces with districts with its municipalities
+	 *
+	 * @return array of provinces 
+	 */
 	public getProvincesWithDistrictsWithMunicipalities() {
 		const district = new District(this.lang)
 		const municipality = new Municipality(this.lang)

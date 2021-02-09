@@ -95,7 +95,6 @@ const province = new Province()
 province.getProvincesWithDistrictsWithMunicipalities()
 ```
 
-
 **7. Search provinces by key and value with exact match option**
 
 ```js
