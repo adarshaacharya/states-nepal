@@ -1,7 +1,7 @@
 {
 	"name": "states-nepal",
-	"version": "0.1.0",
-	"description": "Get structured dataset for administrative division in Nepal.",
+	"version": "0.2.0",
+	"description": "Get structured dataset about administrative division in Nepal.",
 	"keywords": [
 		"states-nepal",
 		"nepal",
