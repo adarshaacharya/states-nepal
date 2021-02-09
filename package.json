@@ -5,8 +5,10 @@
 	"keywords": [
 		"states-nepal",
 		"nepal",
-		"nodejs",
-		"typescript"
+		"nepali",
+		"district-nepal",
+		"municipality-nepal",
+		"province-nepal"
 	],
 	"main": "./lib/cjs/src/index.js",
 	"module": "./lib/esm/src/index.js",
