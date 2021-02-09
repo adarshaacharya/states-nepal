@@ -1,8 +1,8 @@
 import { fetcher } from '../fetchers'
 import { numericEnglish } from '../utils'
 import { District, IDistrict } from './district'
+import { Municipality } from './municipality'
 type Language = 'en' | 'np'
-const APP_LANG = 'np'
 export type Key = 'id' | 'name' | 'area_sq_km' | 'website' | 'headquarter'
 
 export interface IProvince {
@@ -92,12 +92,34 @@ export class Province {
 	 */
 
 	public getProvincesWithDistricts() {
-		const district = new District(APP_LANG)
+		const district = new District(this.lang)
 		const provinces = this.provinces
 
-		return provinces.map(item => ({
-			...item,
-			districts: district.getDistrictsByProvince(item.id),
+		return provinces.map(provinceItem => ({
+			...provinceItem,
+			districts: district.getDistrictsByProvince(provinceItem.id),
+		}))
+	}
+
+	public getProvincesWithDistrictsWithMunicipalities() {
+		const district = new District(this.lang)
+		const municipality = new Municipality(this.lang)
+
+		const provinces = this.provinces
+
+		return provinces.map(provinceItem => ({
+			...provinceItem,
+			districts: district
+				.getDistrictsByProvince(provinceItem.id)
+				.map(districtItem => ({
+					...districtItem,
+					municipalities: municipality
+						.getMunicipalitiesByDistrict(districtItem.id)
+						?.map(municipalityItem => ({
+							...municipalityItem,
+							wards: municipality.wards(municipalityItem.id),
+						})),
+				})),
 		}))
 	}
 

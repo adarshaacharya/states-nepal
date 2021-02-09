@@ -41,6 +41,14 @@ describe('Test province entities', () => {
 		})
 	})
 
+	it('should get provinces with districts with municipalities', () => {
+		const result = _province.getProvincesWithDistrictsWithMunicipalities()
+
+		result.map(item => {
+			expect(item.districts.length).toBeGreaterThanOrEqual(1)
+		})
+	})
+
 	it('should search provinces that match with given key', () => {
 		const keywords = ['id', 'name', 'area_sq_km', 'website', 'headquarter']
 		const allProvinces = _province.allProvinces()

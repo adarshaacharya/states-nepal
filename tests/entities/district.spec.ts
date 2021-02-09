@@ -33,7 +33,7 @@ describe('Test District entities', () => {
 		expect(smallest).toMatchObject({ id: 23, province_id: 3 })
 	})
 
-	it('should districts with municipalities', () => {
+	it('should get districts with municipalities', () => {
 		const districtsWithMunicipalities = _district.getDistrictsWithMunicipalities()
 	
 		districtsWithMunicipalities.map(item => {
