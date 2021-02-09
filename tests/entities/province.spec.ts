@@ -36,7 +36,6 @@ describe('Test province entities', () => {
 	it('should test if districts are correctly loaded with provinces', () => {
 		const provincesWithDistricts = _province.getProvincesWithDistricts()
 
-		// console.log(provincesWithDistricts.length)
 		provincesWithDistricts.map(item => {
 			expect(item.districts.length).toBeGreaterThanOrEqual(1)
 		})

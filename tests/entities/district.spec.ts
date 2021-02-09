@@ -1,4 +1,4 @@
-import { District, IDistrict  } from '../../src/entities/district'
+import { District, Key } from '../../src/entities/district'
 import { range } from '../../src/utils'
 const APP_LANG = 'np'
 
@@ -33,6 +33,15 @@ describe('Test District entities', () => {
 		expect(smallest).toMatchObject({ id: 23, province_id: 3 })
 	})
 
+	it('should districts with municipalities', () => {
+		const districtsWithMunicipalities = _district.getDistrictsWithMunicipalities()
+	
+		districtsWithMunicipalities.map(item => {
+			expect(item.municipalities).toBeDefined()
+			expect(item.municipalities?.length).toBeGreaterThanOrEqual(1)
+		})
+	})
+
 	it('should search districts that match with given key', () => {
 		const keywords = [
 			'id',
@@ -46,10 +55,7 @@ describe('Test District entities', () => {
 
 		for (const key of keywords) {
 			for (const value of districts) {
-				const items = _district.search(
-					key as keyof IDistrict,
-					value[key as keyof IDistrict]
-				)
+				const items = _district.search(key as Key, value[key as Key])
 				expect(items.length).toBeGreaterThanOrEqual(1)
 			}
 		}

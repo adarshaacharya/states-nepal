@@ -95,11 +95,10 @@ export class Province {
 		const district = new District(APP_LANG)
 		const provinces = this.provinces
 
-		const result = provinces.map(item => ({
+		return provinces.map(item => ({
 			...item,
 			districts: district.getDistrictsByProvince(item.id),
 		}))
-		return result
 	}
 
 	/**
