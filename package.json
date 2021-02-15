@@ -25,6 +25,7 @@
 	"scripts": {
 		"test": "jest",
 		"test:watch": "jest --watch",
+		"test:commit":"jest --bail --passWithNoTests --findRelatedTests --cov",
 		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
 		"build:watch": "tsc -w",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
