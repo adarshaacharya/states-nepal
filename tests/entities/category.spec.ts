@@ -1,7 +1,7 @@
 import { Category, ICategory } from '../../src/entities/category'
 import { range } from '../../src/utils'
 
-const APP_LANG = 'np'
+const APP_LANG = 'en'
 const _category = new Category(APP_LANG)
 
 describe('Test Category entities', () => {

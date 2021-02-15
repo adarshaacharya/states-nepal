@@ -25,7 +25,7 @@
 	"scripts": {
 		"test": "jest",
 		"test:watch": "jest --watch",
-		"test:commit":"jest --bail --passWithNoTests --findRelatedTests --cov",
+		"test:commit": "jest  --coverage --bail --passWithNoTests --findRelatedTests",
 		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
 		"build:watch": "tsc -w",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -41,8 +41,8 @@
 	},
 	"lint-staged": {
 		"*.ts": [
+			"npm run lint:fix -- --cache",
 			"npm run format",
-			"npm run lint:fix",
 			"jest --bail --passWithNoTests --findRelatedTests"
 		]
 	},
