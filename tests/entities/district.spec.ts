@@ -35,7 +35,7 @@ describe('Test District entities', () => {
 
 	it('should get districts with municipalities', () => {
 		const districtsWithMunicipalities = _district.getDistrictsWithMunicipalities()
-	
+
 		districtsWithMunicipalities.map(item => {
 			expect(item.municipalities).toBeDefined()
 			expect(item.municipalities?.length).toBeGreaterThanOrEqual(1)
