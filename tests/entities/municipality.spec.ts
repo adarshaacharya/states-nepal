@@ -44,7 +44,7 @@ describe('Test Municipality entities', () => {
 
 		const set = range(1, 753)
 		set.forEach(id => {
-            const muniWards = _municipality.wards(id)
+			const muniWards = _municipality.wards(id)
 			const result = muniWards?.filter(x => !wards.includes(x))
 			expect(result?.length).toBe(0)
 		})

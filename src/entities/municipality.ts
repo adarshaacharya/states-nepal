@@ -27,7 +27,7 @@ export class Municipality {
 	constructor(lang: Language = 'en') {
 		try {
 			this.lang = lang
-			this.municipalities = fetcher('municipalities',this.lang)
+			this.municipalities = fetcher('municipalities', this.lang)
 		} catch (err) {
 			throw new Error(`Municipalities of given language doesn't exists.`)
 		}
@@ -121,12 +121,14 @@ export class Municipality {
 		if (this.lang === 'np' && municipality) {
 			const totalWards = parseInt(numericEnglish(municipality.wards))
 
-			let wards = range(1, totalWards)
+			const wards = range(1, totalWards)
 
 			return wards.map(i => String(i)).map(el => numericNepali(el))
 		}
 
-		return municipality && (range(1, parseInt(municipality.wards))).map(i => String(i))
+		return (
+			municipality && range(1, parseInt(municipality.wards)).map(i => String(i))
+		)
 	}
 
 	/**

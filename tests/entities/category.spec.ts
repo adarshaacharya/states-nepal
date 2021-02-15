@@ -1,5 +1,5 @@
 import { Category, ICategory } from '../../src/entities/category'
-import { range} from '../../src/utils'
+import { range } from '../../src/utils'
 
 const APP_LANG = 'np'
 const _category = new Category(APP_LANG)
@@ -47,7 +47,7 @@ describe('Test Category entities', () => {
 				const items = _category.search(
 					key as keyof ICategory,
 					value[key as keyof ICategory]
-                )
+				)
 				expect(items.length).toBeGreaterThanOrEqual(1)
 			}
 		}
