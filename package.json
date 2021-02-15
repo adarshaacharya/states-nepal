@@ -25,6 +25,7 @@
 	"scripts": {
 		"test": "jest",
 		"test:watch": "jest --watch",
+		"test:cov": "jest --coverage",
 		"test:commit": "jest  --coverage --bail --passWithNoTests --findRelatedTests",
 		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
 		"build:watch": "tsc -w",
