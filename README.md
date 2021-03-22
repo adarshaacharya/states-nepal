@@ -111,5 +111,5 @@ Give a ⭐️ if you like the project! :tada:
 
 ## License
 
-Copyright © 2020 [Aadarsha Acharya](http://adarshaacharya.com.np/).<br />
+Copyright © 2021 [Aadarsha Acharya](http://adarshaacharya.com.np/).<br />
 This project is [MIT](https://github.com/adarshaacharya/states-nepal/blob/master/LICENSE) licensed.
