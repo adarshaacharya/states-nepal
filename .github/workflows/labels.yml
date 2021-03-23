@@ -2,7 +2,7 @@ name: Import labels
 on:
   push:
     paths:
-      - '.github/data/labels.json'
+      - 'data/github/labels.json'
 
 jobs:
   labels:
@@ -28,4 +28,4 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           npx ghlbl -o adarshaacharya -r stargate -t ${{ secrets.GITHUB_TOKEN }} -d
-          npx ghlbl -o adarshaacharya -r stargate -t ${{ secrets.GITHUB_TOKEN }} -i .github/data/labels.json
+          npx ghlbl -o adarshaacharya -r stargate -t ${{ secrets.GITHUB_TOKEN }} -i data/github/labels.json
