@@ -35,7 +35,7 @@
     <a href="https://github.com/adarshaacharya/states-nepal/issues">Report Bug</a>
     ·
     <a href="https://github.com/adarshaacharya/states-nepal/issues">Request Feature</a>
-    .
+    ·
     <a href="https://github.com/adarshaacharya/states-nepal/issues">Ask Question</a>
 
   </p>
