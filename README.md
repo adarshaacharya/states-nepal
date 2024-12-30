@@ -19,9 +19,6 @@
     <img src="https://img.shields.io/npm/dt/states-nepal" alt="npm downloads"/>
  </a>
  
- <a href="https://github.com/adarshaacharya/states-nepal/actions">
-      <img alt="tests passing" src="https://github.com/adarshaacharya/states-nepal/workflows/tests/badge.svg" />
-    </a>
 <a href="https://github.com/adarshaacharya/states-nepal/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/adarshaacharya/states-nepal?color=0088ff" />
     </a>
@@ -39,7 +36,7 @@
     <a href="https://github.com/adarshaacharya/states-nepal/issues">Ask Question</a>
 
   </p>
-  <p align="center">states-nepal is a npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc. Install and use the package on any Javascript/Typescript based  applications in one go! </p>
+  <p align="center">states-nepal is a npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc. Install and use the package on any Javascript/Typescript based on Node.js or browser environment! </p>
 
 ## Installation
 
@@ -51,8 +48,8 @@ $ npm install states-nepal
 
 **Applications :**
 
-- Typescript
-- Javascript
+- Node.js 
+- Browsers
 
 **Import :**
 
@@ -104,12 +101,12 @@ Give a ⭐️ if you like the project! :tada:
 
 ## Author
 
-- Website: <https://adarshaacharya.com.np/>
-- Twitter: [@aadarshatweets](https://twitter.com/aadarshatweets)
+- Website: <https://adarsha.dev/>
+- Twitter: [@adarsha_ach](https://x.com/adarsha_ach)
 - Github: [@adarshaacharya](https://github.com/adarshaacharya)
 - LinkedIn: [@adarshaacharya](https://linkedin.com/in/adarshaacharya)
 
 ## License
 
-Copyright © 2021 [Aadarsha Acharya](http://adarshaacharya.com.np/).<br />
+Copyright © 2021 [Aadarsha Acharya](http://adarsha.dev/).<br />
 This project is [MIT](https://github.com/adarshaacharya/states-nepal/blob/master/LICENSE) licensed.
