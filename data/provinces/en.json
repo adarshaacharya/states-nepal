@@ -1,14 +1,14 @@
 [
 	{
 		"id": 1,
-		"name": "Province No. 1",
+		"name": "Koshi",
 		"area_sq_km": "25906",
 		"website": "https://p1.gov.np/",
 		"headquarter": "Biratnagar"
 	},
 	{
 		"id": 2,
-		"name": "Province No. 2",
+		"name": "Madhesh",
 		"area_sq_km": "9661",
 		"website": "https://p2.gov.np/",
 		"headquarter": "Janakpur"
